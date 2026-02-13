@@ -30,6 +30,10 @@ docker run -it --name my_app -e APP_ENV=production my_image bash
 ## Port mapping example
 docker run -d -p 3307:3306 --name mysql-test -e MYSQL_ROOT_PASSWORD=root123 mysql
 
+docker run -d --name DB-APP -p 80:8082 mongo
+docker run -it --name nginx-app -p 8080:8080 -e nginx\_port=8080 nginx bash
+
+
 ## Run Ubuntu with env variable
 docker run -it --name myubuntu -e college=cse ubuntu bash
 
